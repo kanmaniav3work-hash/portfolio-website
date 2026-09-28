@@ -1,22 +1,28 @@
-AMIRTHA VINUSHA PORTFOLIO — V2
+AMIRTHA VINUSHA PORTFOLIO — V3
 
-V2:
-• Brolimo is now embedded and wired into display titles.
-• Black / cream / red palette retained.
-• Homepage and project pages are significantly less text-heavy.
-• Each project gives the hiring viewer the core problem, strategic move and result first.
-• KNOW THE WHOLE STORY opens the complete narrative in a full-screen transition.
-• Added masked typography reveals, scroll movement, marquee motion and case-study panel transitions.
-• Home and About remain image-free.
-• Each project retains three image positions.
+Rebuilt from scratch around the interaction principles you referenced:
+Ting: personality, work-first storytelling, visual interruptions.
+Ping: oversized typography, rhythm, motion, projects as visual objects.
 
-TO UPDATE YOUR LIVE GITHUB SITE:
-Replace index.html, style.css and script.js.
-Upload the fonts folder so this exact path exists:
+This is not a copy of either site.
+
+V3:
+• Black / cream / red retained
+• Actual Brolimo font embedded
+• Work appears before biography
+• No empty IMAGE 01 boxes
+• Each case has an intentional typographic visual until campaign assets are added
+• Full narrative is hidden behind View Case Study
+• Thinking is a five-step visual process
+• AI section is Human × Machine → More Time to Think
+• Masked text reveals and full-screen case transitions
+
+Upload these to the ROOT of your GitHub repository:
+index.html
+style.css
+script.js
 fonts/BrolimoRegular-ALgg2.ttf
 
-The assets folder is ready for your campaign images.
-
 Before final publishing:
-• Replace the LinkedIn placeholder.
-• Confirm the K.R. Nagaraj 30K attribution.
+• Add actual LinkedIn URL
+• Confirm K.R. Nagaraj 30K attribution
