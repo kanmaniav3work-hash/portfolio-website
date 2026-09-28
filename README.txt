@@ -1,28 +1,39 @@
-AMIRTHA VINUSHA PORTFOLIO — V3
+AMIRTHA VINUSHA PORTFOLIO — V4
 
-Rebuilt from scratch around the interaction principles you referenced:
-Ting: personality, work-first storytelling, visual interruptions.
-Ping: oversized typography, rhythm, motion, projects as visual objects.
+V4 specifically fixes the hierarchy issue in V3:
+• Display typography reduced substantially
+• Clear heading → subheading → supporting copy hierarchy
+• More negative space and calmer reading rhythm
+• Content constrained to an editorial grid
+• Brand names become explicit credibility anchors
+• RAPIDO, RAACK ACADEMY, K.R. NAGARAJ, SUNDARI SILKS and SAREGAMA SOUTH appear prominently
+• Project artwork stays playful without overpowering the information
+• Case study typography is reduced too
+• Black / cream / red and Brolimo retained
 
-This is not a copy of either site.
-
-V3:
-• Black / cream / red retained
-• Actual Brolimo font embedded
-• Work appears before biography
-• No empty IMAGE 01 boxes
-• Each case has an intentional typographic visual until campaign assets are added
-• Full narrative is hidden behind View Case Study
-• Thinking is a five-step visual process
-• AI section is Human × Machine → More Time to Think
-• Masked text reveals and full-screen case transitions
-
-Upload these to the ROOT of your GitHub repository:
+Upload/replace at GitHub root:
 index.html
 style.css
 script.js
+README.txt
 fonts/BrolimoRegular-ALgg2.ttf
 
 Before final publishing:
 • Add actual LinkedIn URL
 • Confirm K.R. Nagaraj 30K attribution
+
+
+V4.1 MICROGRAPHIC LAYER
+• Small red idea spark in hero
+• Route-line animation for Rapido
+• Rhythmic gesture for Raack
+• Restrained dot accent for K.R. Nagaraj
+• Orbit gesture for Sundari 360°
+• Audio-wave gesture for Saregama South
+• Moving strategy thread through Thinking
+• Human-to-machine spark in AI
+• Final settling spark at Contact
+• All animations are intentionally small and live mainly in negative space
+• Reduced-motion accessibility is supported
+
+No image assets are required for these micrographics. They are SVG/CSS/JS and scale cleanly.

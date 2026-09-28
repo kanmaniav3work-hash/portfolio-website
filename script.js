@@ -1,1 +1,31 @@
 const cases={rapido:{label:'RAPIDO / CREATIVE CAMPAIGN',title:'CUSTOMER FRICTION → CHRISTMAS SURPRISE.',parts:[['THE PROBLEM','Customers in Chennai were unhappy because some auto drivers were asking them to pay above the fare shown on the app. For Christmas, the brand wanted an interactive campaign that could rebuild warmth.'],['THE QUESTION','How do you create a better brand story exactly where the customer friction happens?'],['THE IDEA','WHAT IF YOUR RAPIDO DRIVER WAS SANTA?'],['THE EXECUTION','I built the experience around a celebrity with strong family and comedy appeal playing Santa, driving unsuspecting customers and revealing himself at the end of the ride with a curated Christmas goodie box. I handled the campaign thinking through celebrity coordination, team and vendor coordination, shoot execution and post production.'],['THE RESULT','1M+ organic views · 100K+ reshares.']]},raack:{label:'RAACK ACADEMY / BRAND POSITIONING',title:'DANCE CLASSES → DANCE EDUCATION.',parts:[['THE PROBLEM','Raack had 30+ franchises and recognition within the dance fraternity. The next challenge was reaching people who were not already looking for dance.'],['THE SHIFT','DON’T SELL DANCE CLASSES. BUILD A CASE FOR DANCE EDUCATION.'],['THE AUDIENCE','I focused the communication on young parents and parents of toddlers, framing dance as part of a child’s growing years rather than another extracurricular activity.'],['THE THINKING','A child entering at 3 could potentially continue until 15 or 16. Reaching the parent earlier could create a much longer relationship with the brand.'],['DURING THE PERIOD','30+ → 45 franchise footprint · 100+ enquiries · 60+ enrolments.']]},krn:{label:'K.R. NAGARAJ / PERSONAL BRANDING',title:'OFFLINE CREDIBILITY → DIGITAL RELEVANCE.',parts:[['THE CHALLENGE','Take an established business name with decades of offline credibility and make the journey relevant to a younger digital audience.'],['THE CALL','THE OBVIOUS LAUNCH STORY WAS SUCCESS. I CHOSE FAILURE.'],['THE STRATEGY','I built the early content around career struggles, setbacks, decisions, lessons and the journey behind the success. The success established credibility. The struggle gave a new generation something to connect with.'],['THE RESPONSE','0 → 30K organic followers in 3 months. Final attribution to be confirmed before publishing.']]},sundari:{label:'SUNDARI SILKS / 360° FESTIVE MARKETING',title:'360°. NOT EVERYWHERE.',parts:[['THE BRIEF','Build the 2026 festive marketing plan across traditional, digital and in-store channels for a premium audience and a vintage, culturally rooted collection.'],['THE PRINCIPLE','REACH MATTERED. RELEVANT REACH MATTERED MORE.'],['THE MEDIA THINKING','I mapped each touchpoint around the audience rather than treating 360° as a checklist. Print selection, physical OOH catchments, creators, digital amplification and showroom communication were all filtered through the same premium audience lens.'],['THE SYSTEM','Print · Radio · OOH · Digital OOH · Influencers · Creators · Meta · Social · Model shoots · In-store · Tata Ace branding.']]},saregama:{label:'SAREGAMA SOUTH / MULTI-MARKET STRATEGY',title:'FOUR LANGUAGES. ONE MOVING CALENDAR.',parts:[['THE SCALE','Songs were releasing almost every day across Tamil, Telugu, Malayalam and Kannada labels, each with its own content, audience and promotional requirements.'],['THE JUDGEMENT','WHEN SOMETHING RELEASES EVERY DAY, EVERYTHING CAN’T BE TREATED LIKE THE BIGGEST RELEASE OF THE DAY.'],['THE SYSTEM','Regular releases needed release planning and platform execution. Priority releases needed a wider promotional system involving artists, influencers, content and paid support.'],['THE RESULT','4 regional markets · 30% month-on-month growth in followers and engagement.']]}};const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));addEventListener('scroll',()=>{let m=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=(m?scrollY/m*100:0)+'%'},{passive:true});const ov=document.getElementById('overlay'),story=document.getElementById('story'),label=document.getElementById('label');document.querySelectorAll('.project button').forEach(b=>b.onclick=()=>{let c=cases[b.closest('.project').dataset.case];label.textContent=c.label;story.innerHTML='<h2>'+c.title+'</h2>'+c.parts.map((p,i)=>'<section><small>'+p[0]+'</small><p class="'+(['THE IDEA','THE SHIFT','THE CALL','THE PRINCIPLE','THE JUDGEMENT'].includes(p[0])?'punch':'')+'">'+p[1]+'</p></section>').join('');ov.classList.add('open');document.body.style.overflow='hidden';story.scrollTop=0});function close(){ov.classList.remove('open');document.body.style.overflow=''}document.getElementById('close').onclick=close;addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+// V4.1 section-aware micrographics
+const microMap = [
+  {selector:"#home", graphic:".spark-hero"},
+  {selector:'[data-case="rapido"]', graphic:".route-mark"},
+  {selector:'[data-case="raack"]', graphic:".dance-mark"},
+  {selector:'[data-case="sundari"]', graphic:".orbit-mark"},
+  {selector:'[data-case="saregama"]', graphic:".wave-mark"}
+];
+const microObserver = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    const item = microMap.find(m=>entry.target.matches(m.selector));
+    if(!item) return;
+    const graphic=document.querySelector(item.graphic);
+    if(entry.isIntersecting){
+      document.querySelectorAll(".micro-layer svg").forEach(g=>g.classList.remove("active"));
+      graphic?.classList.add("active");
+      entry.target.classList.add("micro-on");
+    }else{
+      graphic?.classList.remove("active");
+      entry.target.classList.remove("micro-on");
+    }
+  });
+},{threshold:.38});
+microMap.forEach(m=>{const el=document.querySelector(m.selector);if(el)microObserver.observe(el)});
+
+const ambientObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>e.target.classList.toggle("micro-on",e.isIntersecting));
+},{threshold:.32});
+document.querySelectorAll("#process,#ai,#contact,[data-case='krn']").forEach(el=>ambientObserver.observe(el));
