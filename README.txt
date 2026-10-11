@@ -1,39 +1,23 @@
-AMIRTHA VINUSHA PORTFOLIO — V4
+AMIRTHA VINUSHA — THE BRANDVERSE V5
 
-V4 specifically fixes the hierarchy issue in V3:
-• Display typography reduced substantially
-• Clear heading → subheading → supporting copy hierarchy
-• More negative space and calmer reading rhythm
-• Content constrained to an editorial grid
-• Brand names become explicit credibility anchors
-• RAPIDO, RAACK ACADEMY, K.R. NAGARAJ, SUNDARI SILKS and SAREGAMA SOUTH appear prominently
-• Project artwork stays playful without overpowering the information
-• Case study typography is reduced too
-• Black / cream / red and Brolimo retained
+Open index.html in a browser to preview.
+For GitHub Pages: upload index.html, style.css, script.js and the entire fonts folder to the root of the existing repository. Replace previous files. Leave GitHub Pages set to main / root.
 
-Upload/replace at GitHub root:
-index.html
-style.css
-script.js
-README.txt
-fonts/BrolimoRegular-ALgg2.ttf
+HOW IT WORKS
+- Scroll through a cinematic starfield and animated constellation route.
+- The EXPLORE MAP button opens jump navigation to every destination.
+- Each brand destination displays its name, a short two-line-scale brief and a highly visible EXPLORE CASE STUDY button.
+- Clicking a case button opens a separate full-screen case study; BACK TO UNIVERSE returns to the same scroll position.
+- Reduced motion preferences supported.
+- Mobile layout supported.
+- Works as a static website, no build step or server required.
 
-Before final publishing:
-• Add actual LinkedIn URL
-• Confirm K.R. Nagaraj 30K attribution
+CONTENT NOTES
+- Original five approved brands preserved: Rapido, Raack Academy, K.R. Nagaraj, Sundari Silks, Saregama South.
+- K.R. Nagaraj follower metric omitted pending attribution confirmation.
+- Raack franchise growth presented as period context, not sole campaign causation.
+- No stock photos or placeholder image boxes. Case studies are text-first and can be extended with approved media later.
+- LinkedIn URL not included because it has not been provided.
+- Supplied Brolimo font is included for use in this portfolio; confirm its non-commercial license permits your intended use before commercial publication.
 
-
-V4.1 MICROGRAPHIC LAYER
-• Small red idea spark in hero
-• Route-line animation for Rapido
-• Rhythmic gesture for Raack
-• Restrained dot accent for K.R. Nagaraj
-• Orbit gesture for Sundari 360°
-• Audio-wave gesture for Saregama South
-• Moving strategy thread through Thinking
-• Human-to-machine spark in AI
-• Final settling spark at Contact
-• All animations are intentionally small and live mainly in negative space
-• Reduced-motion accessibility is supported
-
-No image assets are required for these micrographics. They are SVG/CSS/JS and scale cleanly.
+This is a functional V5 first build; the 3D travel is simulated through parallax starfield and a transforming SVG constellation for fast, reliable GitHub Pages deployment.
